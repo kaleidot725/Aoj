@@ -1,6 +1,7 @@
+#define _USE_MATH_DEFINES
+#include <cmath>
 #include <iostream>
 #include <iomanip>
-#include <cmath>
 
 using namespace std;
 

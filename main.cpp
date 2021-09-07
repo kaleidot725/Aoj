@@ -2,18 +2,20 @@
 
 using namespace std;
 
-char getPrintCharacter(int h, int w, int hmax, int wmax) {
-    if (h == 0 || w == 0 || h == hmax || w == wmax) {
+char getPrintCharacter(int hIndex, int wIndex, int hIndexMax, int wIndexMax) {
+    if (hIndex == 0 || wIndex == 0 || hIndex == hIndexMax || wIndex == wIndexMax) {
         return '#';
     } else {
         return '.';
     }
 }
 
-void printRectangle(int h, int w) {
-    for (int i = 0; i < h; i++) {
-        for (int j = 0; j < w; j++) {
-            cout << getPrintCharacter(i, j, h - 1, w - 1);
+void printRectangle(int height, int width) {
+    int hIndexMax = height - 1;
+    int wIndexMax = width - 1;
+    for (int hIndex = 0; hIndex < height; hIndex++) {
+        for (int wIndex = 0; wIndex < width; wIndex++) {
+            cout << getPrintCharacter(hIndex, wIndex, hIndexMax, wIndexMax);
         }
         cout << endl;
     }
@@ -21,11 +23,9 @@ void printRectangle(int h, int w) {
 }
 
 int main() {
-    int h, w;
-    cin >> h >> w;
-
-    while(!(h == 0 && w == 0)) {
-        printRectangle(h, w);
-        cin >> h >> w;
-    }
+    int height, width;
+    do {
+        cin >> height >> width;
+        printRectangle(height, width);
+    } while(!(height == 0 && width == 0));
 }

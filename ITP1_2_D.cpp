@@ -15,4 +15,5 @@ int ITP1_2_D() {
     } else {
         cout << "No" << endl;
     }
+    return 0;
 }

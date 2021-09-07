@@ -32,4 +32,5 @@ int ITP1_5_B() {
         ITP1_5_B_printRectangle(h, w);
         cin >> h >> w;
     }
+    return 0;
 }

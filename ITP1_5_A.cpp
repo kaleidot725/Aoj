@@ -20,4 +20,5 @@ int ITP1_5_A() {
         ITP1_5_A_printRectangle(h, w);
         cin >> h >> w;
     }
+    return 0;
 }

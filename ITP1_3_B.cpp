@@ -11,4 +11,5 @@ int ITP1_3_B() {
         c++;
         cin >> i;
     }
+    return 0;
 }
